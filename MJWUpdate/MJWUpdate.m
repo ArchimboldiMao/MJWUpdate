@@ -189,16 +189,18 @@ static NSString *kIgnoreButtonTitle_zh = @"跳过";
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:_alertTitle message:_alertSummary preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *alertAction = [UIAlertAction actionWithTitle:_updateButtonTitle style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
             NSURL *url = [NSURL URLWithString:appStoreURL];
-            NSString *osVersion = [[UIDevice currentDevice] systemVersion];
-            float version_float = [osVersion floatValue];
-            if ([[UIApplication sharedApplication] canOpenURL:url]) {
-                if (version_float >= 10.0f) {
-                    [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+            UIApplication *application = [UIApplication sharedApplication];
+            if ([application canOpenURL:url]) {
+                if ([application respondsToSelector:@selector(openURL:options:completionHandler:)]) {
+                    [application openURL:url options:@{} completionHandler:^(BOOL success){
+                        // 强制更新，跳出 App 时需要退出当前 App, 防止用户连按 Home 键／左上角返回，回到 App 时会跳过提醒框继续使用旧版本
+                        exit(0);
+                    }];
                 } else {
                     [[UIApplication sharedApplication] openURL:url];
+                    // 强制更新，跳出 App 时需要退出当前 App, 防止用户连按 Home 键／左上角返回，回到 App 时会跳过提醒框继续使用旧版本
+                    exit(0);
                 }
-                // 强制更新，跳出 App 时需要退出当前 App, 防止用户连按 Home 键回到 App 时会跳过提醒框继续使用旧版本
-                exit(0);
             } else {
                 [alertController dismissViewControllerAnimated:YES completion:nil];
             }
