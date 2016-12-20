@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		52A981BE1E07A7B600D29169 /* UniversalBuilder */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 52A981BF1E07A7B600D29169 /* Build configuration list for PBXAggregateTarget "UniversalBuilder" */;
+			buildPhases = (
+				52A981C21E07A7EA00D29169 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = UniversalBuilder;
+			productName = UniversalBuilder;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		526C896F1E0112D9008FAE64 /* MJWUpdate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526C89651E0112D9008FAE64 /* MJWUpdate.framework */; };
 		526C89741E0112D9008FAE64 /* MJWUpdateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 526C89731E0112D9008FAE64 /* MJWUpdateTests.m */; };
@@ -218,6 +232,11 @@
 						DevelopmentTeam = XS9T3GFZ5N;
 						ProvisioningStyle = Automatic;
 					};
+					52A981BE1E07A7B600D29169 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = XS9T3GFZ5N;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 526C895F1E0112D9008FAE64 /* Build configuration list for PBXProject "MJWUpdate" */;
@@ -241,6 +260,7 @@
 			targets = (
 				526C89641E0112D9008FAE64 /* MJWUpdate */,
 				526C896D1E0112D9008FAE64 /* MJWUpdateTests */,
+				52A981BE1E07A7B600D29169 /* UniversalBuilder */,
 			);
 		};
 /* End PBXProject section */
@@ -285,6 +305,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52A981C21E07A7EA00D29169 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Merge Script\n\n# 1\n# Set bash script to exit immediately if any commands fail.\nset -e\n\n# 2\n# Setup some constants for use later on.\nFRAMEWORK_NAME=\"MJWUpdate\"\n\n# 3\n# If remnants from a previous build exist, delete them.\nif [ -d \"${SRCROOT}/build\" ]; then\nrm -rf \"${SRCROOT}/build\"\nfi\n\n# 4\n# Build the framework for device and for simulator (using\n# all needed architectures).\nxcodebuild -target \"${FRAMEWORK_NAME}\" -configuration Release -arch arm64 -arch armv7 -arch armv7s only_active_arch=no defines_module=yes -sdk \"iphoneos\"\nxcodebuild -target \"${FRAMEWORK_NAME}\" -configuration Release -arch x86_64 -arch i386 only_active_arch=no defines_module=yes -sdk \"iphonesimulator\"\n\n# 5\n# Remove .framework file if exists on Desktop from previous run.\nif [ -d \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\" ]; then\nrm -rf \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\"\nfi\n\n# 6\n# Copy the device version of framework to Desktop.\ncp -r \"${SRCROOT}/build/Release-iphoneos/${FRAMEWORK_NAME}.framework\" \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\"\n\n# 7\n# Replace the framework executable within the framework with\n# a new version created by merging the device and simulator\n# frameworks' executables with lipo.\nlipo -create -output \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${SRCROOT}/build/Release-iphoneos/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${SRCROOT}/build/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n\n# 8\n# Copy the Swift module mappings for the simulator into the\n# framework.  The device mappings already exist from step 6.\n# cp -r \"${SRCROOT}/build/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/\" \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\n\n# 9\n# Delete the most recent build.\nif [ -d \"${SRCROOT}/build\" ]; then\nrm -rf \"${SRCROOT}/build\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		526C89601E0112D9008FAE64 /* Sources */ = {
@@ -430,6 +466,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/usr/lib",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_BUNDLE_IDENTIFIER = me.archimboldi.MJWUpdate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -495,6 +532,22 @@
 			};
 			name = Release;
 		};
+		52A981C01E07A7B600D29169 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = XS9T3GFZ5N;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		52A981C11E07A7B600D29169 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = XS9T3GFZ5N;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -521,6 +574,15 @@
 			buildConfigurations = (
 				526C897D1E0112D9008FAE64 /* Debug */,
 				526C897E1E0112D9008FAE64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52A981BF1E07A7B600D29169 /* Build configuration list for PBXAggregateTarget "UniversalBuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52A981C01E07A7B600D29169 /* Debug */,
+				52A981C11E07A7B600D29169 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
