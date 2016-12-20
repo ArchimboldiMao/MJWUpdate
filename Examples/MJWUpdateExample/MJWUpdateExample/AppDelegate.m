@@ -20,9 +20,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    NSNumber *appleID = @284882215;
-    MJWUpdate *versionUpdate = [MJWUpdate new];
+    // Test by Tweetbot 4
+    // https://itunes.apple.com/us/app/tweetbot-4-for-twitter/id1018355599?mt=8
+    // https://itunes.apple.com/lookup?id=1018355599
+    // "bundleId":"com.tapbots.Tweetbot4",
+    // "trackId":1018355599,
+    // "trackName":"Tweetbot 4 for Twitter"
+    // "version":"4.5.3"
+    // "currentVersionReleaseDate":"2016-12-02T17:12:48Z"
     
+    NSNumber *appleID = @1018355599;
+    MJWUpdate *versionUpdate = [MJWUpdate new];
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     UIViewController *rootViewController;
@@ -31,7 +39,7 @@
         rootViewController = storyboard.instantiateInitialViewController;
     } else {
         rootViewController = [[UIViewController alloc] init];
-        UIView *updateView = [[UIView alloc] initWithFrame:self.window.bounds];
+        UIView *updateView = [[UIView alloc] initWithFrame:_window.bounds];
         updateView.backgroundColor = [UIColor whiteColor];
         [rootViewController.view addSubview:updateView];
     }

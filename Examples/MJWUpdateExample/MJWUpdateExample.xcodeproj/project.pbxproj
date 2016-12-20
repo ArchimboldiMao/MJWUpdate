@@ -15,7 +15,8 @@
 		526C89D91E0275E3008FAE64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526C89D71E0275E3008FAE64 /* LaunchScreen.storyboard */; };
 		526C89E41E0275E3008FAE64 /* MJWUpdateExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 526C89E31E0275E3008FAE64 /* MJWUpdateExampleTests.m */; };
 		526C89EF1E0275E3008FAE64 /* MJWUpdateExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 526C89EE1E0275E3008FAE64 /* MJWUpdateExampleUITests.m */; };
-		526C8A5E1E02770C008FAE64 /* MJWUpdate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526C8A5D1E02770C008FAE64 /* MJWUpdate.framework */; };
+		52A981C41E07AEFE00D29169 /* MJWUpdate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A981C31E07AEFE00D29169 /* MJWUpdate.framework */; };
+		52A981C61E07AF7200D29169 /* MJWUpdate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52A981C31E07AEFE00D29169 /* MJWUpdate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		52A981C71E07AF7200D29169 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				52A981C61E07AF7200D29169 /* MJWUpdate.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		526C89C61E0275E3008FAE64 /* MJWUpdateExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJWUpdateExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		526C89CA1E0275E3008FAE64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -52,7 +67,7 @@
 		526C89EA1E0275E3008FAE64 /* MJWUpdateExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MJWUpdateExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		526C89EE1E0275E3008FAE64 /* MJWUpdateExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJWUpdateExampleUITests.m; sourceTree = "<group>"; };
 		526C89F01E0275E3008FAE64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		526C8A5D1E02770C008FAE64 /* MJWUpdate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MJWUpdate.framework; path = "../../../../Library/Developer/Xcode/DerivedData/MJWUpdate-axeladbygqihisgtlychsfujjezz/Build/Products/Debug-iphonesimulator/MJWUpdate.framework"; sourceTree = "<group>"; };
+		52A981C31E07AEFE00D29169 /* MJWUpdate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MJWUpdate.framework; path = "../../../../Library/Developer/Xcode/DerivedData/MJWUpdate-afvrgdjuojchjiheluvarcdtaezu/Build/Products/Debug-iphoneos/MJWUpdate.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				526C8A5E1E02770C008FAE64 /* MJWUpdate.framework in Frameworks */,
+				52A981C41E07AEFE00D29169 /* MJWUpdate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +162,7 @@
 		526C8A5C1E02770C008FAE64 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				526C8A5D1E02770C008FAE64 /* MJWUpdate.framework */,
+				52A981C31E07AEFE00D29169 /* MJWUpdate.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,6 +177,7 @@
 				526C89C21E0275E3008FAE64 /* Sources */,
 				526C89C31E0275E3008FAE64 /* Frameworks */,
 				526C89C41E0275E3008FAE64 /* Resources */,
+				52A981C71E07AF7200D29169 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -439,8 +455,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XS9T3GFZ5N;
 				INFOPLIST_FILE = MJWUpdateExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bonson.bfbbapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tapbots.Tweetbot4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -451,8 +468,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XS9T3GFZ5N;
 				INFOPLIST_FILE = MJWUpdateExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bonson.bfbbapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tapbots.Tweetbot4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
