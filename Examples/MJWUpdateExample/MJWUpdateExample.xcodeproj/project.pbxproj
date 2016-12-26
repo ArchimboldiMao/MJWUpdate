@@ -15,8 +15,8 @@
 		526C89D91E0275E3008FAE64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526C89D71E0275E3008FAE64 /* LaunchScreen.storyboard */; };
 		526C89E41E0275E3008FAE64 /* MJWUpdateExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 526C89E31E0275E3008FAE64 /* MJWUpdateExampleTests.m */; };
 		526C89EF1E0275E3008FAE64 /* MJWUpdateExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 526C89EE1E0275E3008FAE64 /* MJWUpdateExampleUITests.m */; };
-		52A981C41E07AEFE00D29169 /* MJWUpdate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A981C31E07AEFE00D29169 /* MJWUpdate.framework */; };
-		52A981C61E07AF7200D29169 /* MJWUpdate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52A981C31E07AEFE00D29169 /* MJWUpdate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6B68729EF0B35F6929373E26 /* libPods-MJWUpdateExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1C11CB6D977F0431EBCE50 /* libPods-MJWUpdateExampleTests.a */; };
+		DDFB5894F0E44D842A2D624D /* libPods-MJWUpdateExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48482FC03ADA11DE8167A1A2 /* libPods-MJWUpdateExample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,21 +36,10 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		52A981C71E07AF7200D29169 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				52A981C61E07AF7200D29169 /* MJWUpdate.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		1098E4618D2E1E87D1AC78A5 /* Pods-MJWUpdateExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJWUpdateExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MJWUpdateExample/Pods-MJWUpdateExample.debug.xcconfig"; sourceTree = "<group>"; };
+		1641DE3716BC5817A157A570 /* Pods-MJWUpdateExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJWUpdateExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MJWUpdateExample/Pods-MJWUpdateExample.release.xcconfig"; sourceTree = "<group>"; };
+		48482FC03ADA11DE8167A1A2 /* libPods-MJWUpdateExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MJWUpdateExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		526C89C61E0275E3008FAE64 /* MJWUpdateExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJWUpdateExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		526C89CA1E0275E3008FAE64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		526C89CC1E0275E3008FAE64 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,7 +56,9 @@
 		526C89EA1E0275E3008FAE64 /* MJWUpdateExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MJWUpdateExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		526C89EE1E0275E3008FAE64 /* MJWUpdateExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJWUpdateExampleUITests.m; sourceTree = "<group>"; };
 		526C89F01E0275E3008FAE64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52A981C31E07AEFE00D29169 /* MJWUpdate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MJWUpdate.framework; path = "../../../../Library/Developer/Xcode/DerivedData/MJWUpdate-afvrgdjuojchjiheluvarcdtaezu/Build/Products/Debug-iphoneos/MJWUpdate.framework"; sourceTree = "<group>"; };
+		6806F08DE1859FE6ABB14015 /* Pods-MJWUpdateExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJWUpdateExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MJWUpdateExampleTests/Pods-MJWUpdateExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A7F29539868313D3EE293E97 /* Pods-MJWUpdateExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJWUpdateExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MJWUpdateExampleTests/Pods-MJWUpdateExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		AD1C11CB6D977F0431EBCE50 /* libPods-MJWUpdateExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MJWUpdateExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52A981C41E07AEFE00D29169 /* MJWUpdate.framework in Frameworks */,
+				DDFB5894F0E44D842A2D624D /* libPods-MJWUpdateExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B68729EF0B35F6929373E26 /* libPods-MJWUpdateExampleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +96,7 @@
 				526C89ED1E0275E3008FAE64 /* MJWUpdateExampleUITests */,
 				526C89C71E0275E3008FAE64 /* Products */,
 				526C8A5C1E02770C008FAE64 /* Frameworks */,
+				7835B1E44A11F6649FCFC882 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,9 +155,21 @@
 		526C8A5C1E02770C008FAE64 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				52A981C31E07AEFE00D29169 /* MJWUpdate.framework */,
+				48482FC03ADA11DE8167A1A2 /* libPods-MJWUpdateExample.a */,
+				AD1C11CB6D977F0431EBCE50 /* libPods-MJWUpdateExampleTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7835B1E44A11F6649FCFC882 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1098E4618D2E1E87D1AC78A5 /* Pods-MJWUpdateExample.debug.xcconfig */,
+				1641DE3716BC5817A157A570 /* Pods-MJWUpdateExample.release.xcconfig */,
+				6806F08DE1859FE6ABB14015 /* Pods-MJWUpdateExampleTests.debug.xcconfig */,
+				A7F29539868313D3EE293E97 /* Pods-MJWUpdateExampleTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,10 +179,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 526C89F31E0275E3008FAE64 /* Build configuration list for PBXNativeTarget "MJWUpdateExample" */;
 			buildPhases = (
+				52FC9AE5289CF05716EF3E32 /* [CP] Check Pods Manifest.lock */,
 				526C89C21E0275E3008FAE64 /* Sources */,
 				526C89C31E0275E3008FAE64 /* Frameworks */,
 				526C89C41E0275E3008FAE64 /* Resources */,
-				52A981C71E07AF7200D29169 /* Embed Frameworks */,
+				B042BBD8A79584AB29CE44EE /* [CP] Embed Pods Frameworks */,
+				D7859B2B7E63F8890C058E7F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,9 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 526C89F61E0275E3008FAE64 /* Build configuration list for PBXNativeTarget "MJWUpdateExampleTests" */;
 			buildPhases = (
+				B14D86B8E8377B01D004DD07 /* [CP] Check Pods Manifest.lock */,
 				526C89DB1E0275E3008FAE64 /* Sources */,
 				526C89DC1E0275E3008FAE64 /* Frameworks */,
 				526C89DD1E0275E3008FAE64 /* Resources */,
+				7A5FEFF152BBC136E6E457D5 /* [CP] Embed Pods Frameworks */,
+				461B86D7827BA2A5F0AEDE5A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -298,6 +308,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		461B86D7827BA2A5F0AEDE5A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MJWUpdateExampleTests/Pods-MJWUpdateExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52FC9AE5289CF05716EF3E32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7A5FEFF152BBC136E6E457D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MJWUpdateExampleTests/Pods-MJWUpdateExampleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B042BBD8A79584AB29CE44EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MJWUpdateExample/Pods-MJWUpdateExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B14D86B8E8377B01D004DD07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D7859B2B7E63F8890C058E7F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MJWUpdateExample/Pods-MJWUpdateExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		526C89C21E0275E3008FAE64 /* Sources */ = {
@@ -451,6 +554,7 @@
 		};
 		526C89F41E0275E3008FAE64 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1098E4618D2E1E87D1AC78A5 /* Pods-MJWUpdateExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XS9T3GFZ5N;
@@ -464,6 +568,7 @@
 		};
 		526C89F51E0275E3008FAE64 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1641DE3716BC5817A157A570 /* Pods-MJWUpdateExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XS9T3GFZ5N;
@@ -477,6 +582,7 @@
 		};
 		526C89F71E0275E3008FAE64 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6806F08DE1859FE6ABB14015 /* Pods-MJWUpdateExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = XS9T3GFZ5N;
@@ -490,6 +596,7 @@
 		};
 		526C89F81E0275E3008FAE64 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7F29539868313D3EE293E97 /* Pods-MJWUpdateExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = XS9T3GFZ5N;

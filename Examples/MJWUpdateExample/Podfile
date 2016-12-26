@@ -1,0 +1,10 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+
+target 'MJWUpdateExample' do
+    pod 'MJWUpdate', :path => '../../../MJWUpdate'
+end
+
+target 'MJWUpdateExampleTests' do
+    pod 'MJWUpdate', :path => '../../../MJWUpdate'
+end
