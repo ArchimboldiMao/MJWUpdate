@@ -7,8 +7,8 @@ Pod::Spec.new do |spec|
   spec.authors = { "Archimboldi Mao" => "archimboldi.mao@gmail.com" }
   spec.social_media_url = "https://twitter.com/ArchimboldiMao"
 
+  spec.source = { :git => "https://github.com/ArchimboldiMao/MJWUpdate.git", :tag => "#{spec.version}", :submodules => true }
+  spec.source_files = "MJWUpdate/**/*.{h,m}"
   spec.platform = :ios, "8.0"
   spec.requires_arc = true
-  spec.source = { git: "https://github.com/ArchimboldiMao/MJWUpdate.git", tag: "v#{spec.version}", submodules: true }
-  spec.source_files = "MJWUpdate/**/*.{h,m}"
 end
