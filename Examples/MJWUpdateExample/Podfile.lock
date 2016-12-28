@@ -1,0 +1,16 @@
+PODS:
+  - MJWUpdate (1.0.1)
+
+DEPENDENCIES:
+  - MJWUpdate (from `../../../MJWUpdate`)
+
+EXTERNAL SOURCES:
+  MJWUpdate:
+    :path: "../../../MJWUpdate"
+
+SPEC CHECKSUMS:
+  MJWUpdate: eaa4dc64ed4f7b967705cceb4b9e6dc052003576
+
+PODFILE CHECKSUM: 6b3521108c01874fb09c2208f8fd109469727411
+
+COCOAPODS: 1.2.0.beta.1
