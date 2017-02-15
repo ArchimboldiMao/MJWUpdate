@@ -1,5 +1,5 @@
 # MJWUpdate
-It's a framework for check your app's latest version in App Store, and alert user to update.
+It's a framework for check your app's latest version on App Store, and alert user to update.
 
 ## Overview
 <img src="Examples/Media/updateNow.png" width="220"/>
