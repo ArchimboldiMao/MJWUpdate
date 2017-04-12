@@ -201,15 +201,12 @@ static NSString *kIgnoreButtonTitle_zh = @"跳过";
                     // 强制更新，跳出 App 时需要退出当前 App, 防止用户连按 Home 键／左上角返回，回到 App 时会跳过提醒框继续使用旧版本
                     exit(0);
                 }
-            } else {
-                [alertController dismissViewControllerAnimated:YES completion:nil];
             }
         }];
         if (!haveToUpdateToNewVersion) {
             NSLog(@"choose to update or ignore");
             UIAlertAction *cancle = [UIAlertAction actionWithTitle:_ignoreButtonTitle style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
                 block();
-                [alertController dismissViewControllerAnimated:YES completion:nil];
             }];
             [alertController addAction:cancle];
         }

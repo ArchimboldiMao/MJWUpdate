@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = "MJWUpdate"
-  spec.version = "1.0.1"
+  spec.version = "1.1.0"
   spec.summary = "It's a framework for check your app's latest version in App Store, and alert user to update."
   spec.homepage = "https://github.com/ArchimboldiMao/MJWUpdate"
   spec.license = { type: 'MIT', file: 'LICENSE' }
